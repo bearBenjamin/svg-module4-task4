@@ -1,0 +1,72 @@
+@font-face {
+    src: url("fonts/FuturaPT-Medium.woff2") format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --futura: "Futura PT", "Arial", sans-serif;
+
+    --black: #000000;
+    --trans: 0.255s ease-in;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: var(--futura);
+    color: var(--black);
+}
+
+.wrapper {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 125px;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 45px;
+}
+
+.hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-weight: 500;
+    font-size: 42px;
+    max-width: 80%;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    text-transform: lowercase;
+	opacity: 0;
+  	transform: translateY(100%);
+    transition: transform var(--trans), opacity var(--trans);
+}
+
+.hero .html {
+    position: absolute;
+    right: -50px;
+    top: -90px;
+    z-index: -1;
+}
+
+.html {
+    stroke-opacity: 0.4;
+}
